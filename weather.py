@@ -1,9 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-#deger = input("İl Girini: ")
-#deger1 = input("İlçe Giriniz: ")
-
 koord={
 "Adana"	: "37,35.32",
 "Adıyaman" :	"37.764751,38.278561",
@@ -87,11 +84,10 @@ koord={
 "Yozgat" :	"39.818081,34.81469",
 "Zonguldak" :	"41.456409,31.798731"
 }
-il=input("Lütfen plaka numarası giriniz: ")
+il=input("Lütfen İl Giriniz: ")
 
 SELECTOR = "#WxuCurrentConditions-main-eb4b02cb-917b-45ec-97ec-d4eb947f6b6a > div > section > div > div.CurrentConditions--body--8sQIV > div.CurrentConditions--columns--3KgfN > div.CurrentConditions--primary--2SVPh > span"
 
-#URL = f"https://www.mgm.gov.tr/?il={deger}&ilce={deger1}"
 URL = f"https://weather.com/weather/today/l/{koord[il]}"
 
 html = requests.get(
